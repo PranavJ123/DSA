@@ -19,7 +19,7 @@ using namespace std;
         return (num | (value<<pos));
     }
 int main(){
-    cout<<getBit(10,2)<<endl;
+    // cout<<getBit(10,2)<<endl;
     // cout<<setBit(10,2);
     // cout<<clearBit(10,1);
     // cout<<updateBit(10,1,0);
