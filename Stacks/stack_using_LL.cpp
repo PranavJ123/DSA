@@ -20,25 +20,48 @@ void push(int val){
 
 int peek(){
     if(top==NULL){
-        cout<<"list is empty";
-    }
-    else{
-        cout<<top->data<<endl;
-    }
-}
-
-int pop(){
-    node * temp=top;
-    if(top==NULL){
+        // cout<<"list is empty";
         return -1;
     }
     else{
-        int popele=top->data;
+        // cout<<top->data<<endl;
+        return top->data;
+    }
+}
+
+bool isEmpty(){
+    if(top== NULL){
+        return true;
+    }
+    return false;
+}
+
+void pop(){
+    node * temp=top;
+    if(top==NULL){
+        // return -1;
+       return;
+    }
+    else{
+        // int popele=top->data;
+        // cout<<top->data;
         top=top->next;
         delete temp;
-        return popele;
+        // return popele;
     }
 
+}
+
+int getCount()
+{
+    int count = 0; 
+    node* current = top; 
+    while (current != NULL)
+    {
+        count++;
+        current = current->next;
+    }
+    return count;
 }
 
 void display(){
@@ -58,13 +81,15 @@ void display(){
 int main(){
     push(2);
     push(3);
-    // push(10);
-    // display();
-    // peek();
-    cout<<pop()<<" ";
-    push(4);
+    push(10);
+    display();
+    cout<<peek();
+    pop();
+    // push(4);
     // push(5);
-    cout<<pop();    
+    // cout<<pop();    
     // peek();
     // display();
+    // cout<<isEmpty();
+    cout<<getCount();
 }
