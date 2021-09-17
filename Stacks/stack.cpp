@@ -49,7 +49,7 @@ int main(){
     cout<<st.pop()<<endl;
     // cout<<st.Top()<<endl;
     // cout<<st.pop()<<endl;
-    cout<<st.pop()<<endl;
-    cout<<st.pop()<<endl;
+    // cout<<st.pop()<<endl;
+    // cout<<st.pop()<<endl;
     cout<<st.isEmpty();
 }

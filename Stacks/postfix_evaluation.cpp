@@ -6,8 +6,8 @@ using namespace std;
 int postfixEvaluation(string str){
     stack<int> st;
     for(int i=0;i<str.length();i++){
-        if(str[i]==' ')continue;
-        if(str[i]>='0' && str[i]<='1000')
+        
+        if(str[i]>='0' && str[i]<='9')
         {
             st.push(str[i]-'0');
         }
@@ -39,6 +39,6 @@ int postfixEvaluation(string str){
     return st.top();
 }
 
-int main(){
-    cout<<postfixEvaluation("100 200 + 2 / 5 * 7 +");
+int main(){             
+    cout<<postfixEvaluation("231*+9-");
 }
